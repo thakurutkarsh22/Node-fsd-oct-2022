@@ -1,0 +1,16 @@
+{
+  "name": "fsd-oct22",
+  "version": "1.0.0",
+  "description": "this is a clas learning project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./ExpressServer/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "utkarsh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
