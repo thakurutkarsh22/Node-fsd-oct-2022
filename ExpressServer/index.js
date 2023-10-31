@@ -8,6 +8,7 @@ const server = express();
 server.get("/", (req, res) => {
   res.statusCode = 200;
   res.write("<h1>Hello gys welcome to the palace!!! Express Server</h1>");
+  res.json();
   res.end();
 
   // calcucation

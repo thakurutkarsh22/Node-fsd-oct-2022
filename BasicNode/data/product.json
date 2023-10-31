@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Nirma Powder",
+    "price": 2000,
+    "quantity": 50
+  },
+  {
+    "id": 2,
+    "name": "Wheel",
+    "price": 2500,
+    "quantity": 50
+  },
+  {
+    "id": 3,
+    "name": "Ariel",
+    "price": 3000,
+    "quantity": 50
+  },
+  {
+    "id": 4,
+    "name": "Imapct ",
+    "price": 2800,
+    "quantity": 50
+  }
+]
