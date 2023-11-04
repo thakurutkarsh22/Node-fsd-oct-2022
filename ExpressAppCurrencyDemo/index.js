@@ -3,6 +3,7 @@ const express = require("express");
 const server = express();
 
 const currencyRoutes = require("./routes/currencies.routes");
+const blogRoutes = require("./routes/blog.routes");
 
 // in here we can authenticate
 // listen to events
@@ -20,7 +21,7 @@ mongoose
 // I am Regestring ROUTES
 
 server.use("/currencies", currencyRoutes);
-// server.use("/blog");
+server.use("/blog", blogRoutes);
 
 const port = 3005;
 server.listen(port, () => {
