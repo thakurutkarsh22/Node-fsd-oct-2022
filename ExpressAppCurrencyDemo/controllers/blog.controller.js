@@ -12,3 +12,11 @@ function searchBlog(req, res) {}
 function createNewBlog(req, res) {}
 function deleteBlog(req, res) {}
 function updateBlog(req, res) {}
+
+module.exports = {
+  getAllBlogs,
+  searchBlog,
+  createNewBlog,
+  deleteBlog,
+  updateBlog,
+};

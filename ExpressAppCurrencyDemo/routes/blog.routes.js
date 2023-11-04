@@ -1,6 +1,13 @@
 const express = require("express");
-
 const router = express.Router();
+
+const {
+  getAllBlogs,
+  searchBlog,
+  createNewBlog,
+  deleteBlog,
+  updateBlog,
+} = require("../controllers/blog.controller");
 
 // METHODS
 
