@@ -1,11 +1,13 @@
+const BlogService = require("../Service/blog.service");
+
+// TODO: you can implement singleton pattern here.
+const BlogServiceInstance = new BlogService();
+
 async function getAllBlogs(req, res) {
-  // in here we are going to call my service....
+  console.log("getAllBlogs debug");
+  const ans = await BlogServiceInstance.findAllBlogs();
 
-  const blogService = new BlogService();
-
-  const ans = await blogService.findAllBlogs();
-
-  res.staus().json(ans);
+  res.status(201).json(ans);
 }
 
 function searchBlog(req, res) {}

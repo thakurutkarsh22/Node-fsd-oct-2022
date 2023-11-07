@@ -24,7 +24,7 @@ server.get("/profile", (req, res, next) => {
   res.status(200).end("Profile stucture + ");
 });
 
-server.use(verifyAuth); // MY middleware for authorization
+// server.use(verifyAuth); // MY middleware for authorization
 
 server.use("/currencies", currencyRoutes);
 server.use("/blog", blogRoutes);
@@ -33,7 +33,7 @@ server.use("/blog", blogRoutes);
 
 const dburl = "mongodb://127.0.0.1:27017";
 mongoose
-  .connect(dburl)
+  .connect(dburl + "/myCompany")
   .then((data) => {
     console.log("My db is connected");
   })
