@@ -3,9 +3,11 @@
 // ---------- IMPORTS ----------------
 
 const blogRoutes = require("./routes/blogs.routes");
+const authRoute = require("./routes/auth.routes");
 
 const express = require("express");
 const server = express();
+const mongoose = require("mongoose");
 
 // change req to json ...
 server.use(express.json());
@@ -14,7 +16,7 @@ server.use(express.json());
 
 server.use("/api/v1/auth", authRoute);
 server.use("/api/v1/blogs", blogRoutes);
-server.use("/api/v1/tags", tagsRoutes);
+// server.use("/api/v1/tags", tagsRoutes);
 // server.use('/api/v1/profile', profileRoutes)
 
 // Auth....

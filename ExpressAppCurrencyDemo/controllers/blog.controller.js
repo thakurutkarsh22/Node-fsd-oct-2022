@@ -1,6 +1,6 @@
 const BlogService = require("../Service/blog.service");
 
-// TODO: you can implement singleton pattern here.
+// TODO: you can implement singleton pattern here.  or dependency Injection.
 const BlogServiceInstance = new BlogService();
 
 async function getAllBlogs(req, res) {
