@@ -7,20 +7,24 @@ const {
   createNewBlog,
   deleteBlog,
   updateBlog,
-} = require("../controllers/blog.controller");
+} = require("../controllers/blogs.controller");
 
 // METHODS
 
 // Handlers
 
-router.get("/", getAllBlogs);
+// router.get("/", getAllBlogs);
 
-router.post("/new", createNewBlog);
+// router.post("/addBlog", addBlog);
 
-router.get("/search", searchBlog);
+router.put("/updateBlog/:id", updateBlog);
 
-router.delete("/:id", deleteBlog);
+router.delete("/deleteBlog/:id", deleteBlog);
 
-router.patch("/:id", updateBlog);
+// router.post("/addComment/:id", addCommentToBlog);
+
+// router.post("/vote/:id", voteBlog);
+
+// router.get("/getComments/:id", getComments);
 
 module.exports = router;
