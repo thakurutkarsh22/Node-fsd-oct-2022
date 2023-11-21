@@ -31,4 +31,15 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
+// this function has only one thing to do..
+userSchema.statics.findAndValidate = async function (userName, password) {
+  const founduser = await this.findOne({ username: userName });
+
+  if (!founduser) {
+    return false;
+  } else {
+    return founduser.password === password ? founduser : false;
+  }
+};
+
 module.exports = mongoose.model("User", userSchema);
