@@ -7,15 +7,17 @@ const {
   createNewBlog,
   deleteBlog,
   updateBlog,
+  addBlog,
 } = require("../controllers/blogs.controller");
+const { fetchUser } = require("../middlewares/fetchUser.middleware");
 
 // METHODS
 
 // Handlers
 
-// router.get("/", getAllBlogs);
+router.get("/", getAllBlogs);
 
-// router.post("/addBlog", addBlog);
+router.post("/addBlog", fetchUser, addBlog);
 
 router.put("/updateBlog/:id", updateBlog);
 

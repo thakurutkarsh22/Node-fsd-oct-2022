@@ -7,7 +7,7 @@ const {
   saveLater,
 } = require("../controllers/auth.controller");
 
-router.get("/signup", createUser);
+router.post("/signup", createUser);
 
 router.post("/login", loginUser);
 
