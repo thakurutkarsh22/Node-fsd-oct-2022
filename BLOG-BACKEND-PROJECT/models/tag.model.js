@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const tagSchema = new Schema({
   categoryName: { type: String },
   category: [
+    // blogs list
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Blog",
